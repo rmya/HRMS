@@ -19,7 +19,7 @@ public class JobPositionController {
 
 	@Autowired
 	public JobPositionController(JobPositionService jobPositionService) {
-		
+		super();
 		this.jobPositionService = jobPositionService;
 	}
 	@GetMapping("/gelall")
