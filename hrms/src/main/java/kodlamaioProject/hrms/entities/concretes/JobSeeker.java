@@ -14,7 +14,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 @Entity
-@EqualsAndHashCode(callSuper = true)
+@EqualsAndHashCode(callSuper = false)  //change
 @Table(name = "employers")
 @PrimaryKeyJoinColumn(name = "user_id")
 public class JobSeeker extends User{
