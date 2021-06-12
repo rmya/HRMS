@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import kodlamaioProject.hrms.business.abstracts.JobSeekerService;
@@ -29,7 +30,7 @@ public class JobSeekerController {
 		
 		return this.jobSeekerService.getAll();
 	}
-	
+	@PostMapping("/add")
 	public Result add(JobSeeker jobSeeker) {
 		
 		return this.jobSeekerService.add(jobSeeker);
