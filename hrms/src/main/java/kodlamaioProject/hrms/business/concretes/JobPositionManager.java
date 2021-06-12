@@ -18,13 +18,14 @@ public class JobPositionManager implements JobPositionService{
 	
 	@Autowired
 	public JobPositionManager(JobPositionDao jobPositionDao) {
+		super();
 		this.jobPositionDao = jobPositionDao;
 	}
 
 	@Override
 	public DataResult<List<JobPosition>> getAll() {
 		
-		return new SuccessDataResult<List<JobPosition>>(this.jobPositionDao.findAll(), "Data listelendi");
+		return new SuccessDataResult<List<JobPosition>>(this.jobPositionDao.findAll(), "İş pozisyonları listelendi");
 	}
 
 }
